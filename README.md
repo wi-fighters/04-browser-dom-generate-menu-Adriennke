@@ -1,6 +1,6 @@
-# Generate a menu programatically
+# Generate a menu programmatically
 
-Aim for this structure within your `body` element:
+## Aim for this structure within your `body` element:
 
 ```html
 <header>
@@ -15,33 +15,40 @@ Aim for this structure within your `body` element:
 </header>
 ```
 
-# WIP
-
-For DOM Manipulation, ask yourself:
+## For DOM Manipulation, ask yourself:
 
 WHAT do we need to target?
-the closest existing parent element
+- the closest existing parent element
 
 HOW will it change?
 a. it's going to get a new child element... (e.g. header)
 b. ... that child element is going to contain the structure for its children
 
 WHEN should it change?
-(Don't worry about this for now)
+(Don't worry about this until we cover Events in class)
 
-## QUERY the document
-grab all the sections
-destructure them into arrays
-map over them and store their id in a new array
+## A guideline for how to break down this problem...
 
-## CREATE elements
+### QUERY the document
 
-Inside the body, create a header.
-Inside the header, create a ul
-Inside the ul, create many li
-Inside each li, create an a
-Give each a an href attribute with a string that matches section IDs
+- grab all the sections
+- destructure them into arrays so we can use array methods
+- map over them and store their ids in a new array
+- use the ids to derive href values
+- use the number of ids to count how many lis we should add
 
-## APPEND the elements to the document
+### CREATE elements
 
+- Inside the body, create a header.
+- Inside the header, create a ul
+- Inside the ul, create many li
+- Inside each li, create an a
+- Give each a an href attribute with a string that matches section IDs
 
+### PREPEND the elements to the document
+
+## YOUR TASK
+
+- study the code provided
+- challenge yourself to build something similar without looking, to be sure you understand how it's working
+- resolve the TODO comments in `script.js`
